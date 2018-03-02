@@ -1,3 +1,4 @@
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 <?php
     function play(){
         // generate deck
@@ -11,7 +12,7 @@
         echo "<p>Player 3:</p>";
         echo "<p>Player 4:</p>";
         echo "</div>";
-        //greger
+       
         // deal player 1
         $dealp1= getHand($deck);
         $deck = $dealp1["deck"];
