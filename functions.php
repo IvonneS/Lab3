@@ -4,7 +4,7 @@
         // generate deck
         $sortedDeck = genDeck();
         
-        // shuffle deck
+        // shuffle deck amount players
         $deck = deckShuffle($sortedDeck);
         echo "<div class='cardsTitle'>";
         echo "<p>Player 1:</p>";
@@ -56,7 +56,7 @@
         $winnerPoints = $results["total"];
         displayWinner($winner,$winnerPoints);
         
-        // display points 
+        // display points of all four players
         echo "<div class='cardPoints'>";
         echo "<p>$p1Sum</p>";
         echo "<p>$p2Sum</p>";
@@ -88,13 +88,13 @@
         $max = max($players);    
         switch(true){
             case $players[0] == $max:
-                return array("total"=>$totalPoints, "winner"=>"1");
+                return array("total"=>$totalPoints,  "winner"=>"1");
             case $players[1] == $max:
-                return array("total"=>$totalPoints, "winner"=>"2");
+                return array("total"=>$totalPoints,  "winner"=>"2");
             case $players[2] == $max:
-                return array("total"=>$totalPoints, "winner"=>"3");
+                return array("total"=>$totalPoints,  "winner"=>"3");
             case $players[3]== $max:
-                return array("total"=>$totalPoints, "winner"=>"4");
+                return array("total"=>$totalPoints,  "winner"=>"4");
         }
     }    
     function deckShuffle($deck){
